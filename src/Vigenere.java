@@ -1,22 +1,50 @@
+import java.util.Scanner;
 
 public class Vigenere {
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        System.out.print("Message: ");
+        String message = in.nextLine();
+        System.out.print("Viegnere: ");
+        String viegnere = in.nextLine();
+        
+        for (int z = 0; z < message.length(); z++) {
+        	
+        	char Final = 0;
+            char Chypher = 0;
+        	int Counter = 0;
+        	char V = viegnere.charAt(Counter); 
+        	
+        	if (Character.isLowerCase(message.charAt(z))) {
+        	char positionA = (char)(message.charAt(z) - 'a');
+        	char positionAV = (char)((viegnere.charAt(Counter) - 'a'));
+        	Chypher = (char)(positionA + positionAV);
+        	Final = (char)((Chypher%26) + 'a');
+            System.out.print(Final);
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+        	} else {
+                System.out.print(" ");
+        	}
+        	
+        	if (Character.isUpperCase(message.charAt(z))) {
+        	char positiona = (char)(message.charAt(z) - 'A');
+        	char positionaV = (char)(viegnere.charAt(Counter) - 'A');
+        	Chypher = (char)(positiona + positionaV);
+        	Final = (char)((Chypher%26) + 'A');
+            System.out.print(Final);
 
-		//Read in message
-		
-		//Read in shift word
-		
-		//Loop through message
-			//if letter is alphabetic
-				//apply shift from the current letter
-				//move to the next shift letter, loop back to the beginning if necessary
-				//if letter is past 'Z'
-					//subtract 26
-			//add letter to output
-		
-		//print output
-	}
+        	} else {
+                System.out.print(" ");
+        	}
+        	
+            Counter++;
+        	                	
+        }
+             
+    }
 
+   
+  
 }
