@@ -11,30 +11,44 @@ public class Caesar {
         System.out.print("Cipher Shift: ");
         int s = in.nextInt();
         
-        System.out.println("Encrypted Message: " + caesarCipher(message, s));
+        for (int z = 0; z < message.length(); z++) {
+        	
+        	if (Character.isLowerCase(message.charAt(z))) {
+        	
+        	char position = (char)(message.charAt(z) - 'a');
+        	
+        	char shift = (char)(position + s);
+        	
+        	char division = (char)((shift % 26) + 'a');
+        	
+        	System.out.println("Encoded message: " + division);
+
+        	
+        	System.out.println("Encoded message: " + division);
+        	
+        	} else {
+        		
+                System.out.print("");
+
+        	}
+        		
+        		
+        		if (Character.isUpperCase(message.charAt(z))){
+        	
+            char position = (char)(message.charAt(z) - 'A');
+        	
+        	char shift = (char)(position + s);
+        	
+        	char division = (char)((shift % 26) + 'A');
+        	
+        	System.out.println("Encoded message: " + division);
+        	
+        	} else {
+        		
+                System.out.print("");
+                
+        	}
+
     }
-
-    public static String caesarCipher(String text, int shift) {
-        StringBuilder result = new StringBuilder();
-
-        shift = shift % 26;
-
-        for (int z = 0; z < text.length(); z++) {
-            char ch = text.charAt(z);
-
-            if (Character.isUpperCase(ch)) {
-                char encryptedCh = (char) (((ch - 'A' + shift + 26) % 26) + 'A');
-                result.append(encryptedCh);
-            } 
-
-            else if (Character.isLowerCase(ch)) {
-                char encryptedCh = (char) (((ch - 'a' + shift + 26) % 26) + 'a');
-                result.append(encryptedCh);
-            } 
-            else {
-                result.append(ch);
-            }
-        }
-        return result.toString();
-    }
+  }
 }

@@ -25,7 +25,9 @@ public class Vigenere {
             System.out.print(Final);
 
         	} else {
+        		
                 System.out.print(" ");
+                
         	}
         	
         	if (Character.isUpperCase(message.charAt(z))) {
@@ -36,7 +38,9 @@ public class Vigenere {
             System.out.print(Final);
 
         	} else {
+        		
                 System.out.print(" ");
+                
         	}
         	
             Counter++;
