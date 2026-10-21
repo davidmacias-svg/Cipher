@@ -23,13 +23,7 @@ public class Vigenere {
 				Final = (char) ((Chypher % 26) + 'a');
 				System.out.print(Final);
 
-			} else {
-
-				System.out.print(" ");
-
-			}
-
-			if (Character.isUpperCase(message.charAt(z))) {
+			} else if (Character.isUpperCase(message.charAt(z))) {
 				char positiona = (char) (message.charAt(z) - 'A');
 				char positionaV = (char) (viegnere.charAt(Counter) - 'A');
 				Chypher = (char) (positiona + positionaV);
@@ -40,9 +34,12 @@ public class Vigenere {
 
 				System.out.print(" ");
 
+				Counter = Counter - 1;
+				
 			}
 
 			Counter++;
+			Counter = Counter % viegnere.length();
 
 		}
 

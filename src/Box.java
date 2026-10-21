@@ -11,30 +11,8 @@ public class Box {
 	     System.out.print("Columms: ");
 	     int Columms = Integer.parseInt(in.nextLine());
 	     
-     	String XCounter = "";
      	String Chypher = "";
      	int counter = 0;
-
-	     
-	        for (int w = 0; w < message.length(); w++) {
-	        	
-                char M = message.charAt(w);
-                
-                if (M != ' ') {
-                	
-                	Chypher = Chypher + M;
-                	
-                }
-	        	
-	        }
-	        	
-	        while (message.length() % Columms != 0) {
-	        	
-	        	XCounter = XCounter + 'X';
-	        	
-	        }
-	        	
-	        
 	        
 	        for (int x = 0; x < Columms; x++) {
 
