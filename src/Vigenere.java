@@ -32,7 +32,7 @@ public class Vigenere {
 
 			} else {
 
-				System.out.print(" ");
+				System.out.print(message.charAt(z));
 
 				Counter = Counter - 1;
 				

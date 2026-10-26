@@ -23,15 +23,8 @@ public class Caesar {
 
 				System.out.println("Encoded message: " + division);
 
-				System.out.println("Encoded message: " + division);
 
-			} else {
-
-				System.out.print("");
-
-			}
-
-			if (Character.isUpperCase(message.charAt(z))) {
+			} else if (Character.isUpperCase(message.charAt(z))) {
 
 				char position = (char) (message.charAt(z) - 'A');
 
@@ -43,7 +36,7 @@ public class Caesar {
 
 			} else {
 
-				System.out.print("");
+				System.out.print(message.charAt(z));
 
 			}
 
