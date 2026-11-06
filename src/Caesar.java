@@ -34,10 +34,6 @@ public class Caesar {
 
 				System.out.println("Encoded message: " + division);
 
-			} else {
-
-				System.out.print(message.charAt(z));
-
 			}
 
 		}
